@@ -1,0 +1,59 @@
+{
+  "name": "Travel Planning Assistant",
+  "description": "An advanced AI agent specialized in travel planning and assistance",
+  "version": "1.0.0",
+  "model": {
+    "provider": "gemini",
+    "model_id": "gemini-2.0-flash-exp",
+    "parameters": {
+      "temperature": 0.6,
+      "max_tokens": 2096
+    }
+  },
+  "tools": [
+    {
+      "name": "web_search",
+      "enabled": true,
+      "description": "Search the web for travel information"
+    },
+    {
+      "name": "visit_webpage",
+      "enabled": true,
+      "description": "Visit and extract information from travel websites"
+    },
+    {
+      "name": "weather_service",
+      "enabled": true,
+      "description": "Get weather information for destinations"
+    },
+    {
+      "name": "cost_calculator",
+      "enabled": true,
+      "description": "Calculate travel costs and budgets"
+    },
+    {
+      "name": "transport_guide",
+      "enabled": true,
+      "description": "Provide transportation options and guidance"
+    }
+  ],
+  "system_prompt": {
+    "role": "Travel Planning Expert",
+    "expertise": [
+      "Strategic Travel Planning",
+      "Destination Analysis",
+      "Budget Optimization",
+      "Cultural Insights",
+      "Transportation Logistics"
+    ]
+  },
+  "max_steps": 6,
+  "response_format": {
+    "structure": [
+      "Trip Overview",
+      "Detailed Itinerary",
+      "Practical Information",
+      "Additional Recommendations"
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+markdownify
+smolagents
+requests
+duckduckgo_search
+pandas
+litellm
+streamlit-folium
+folium
