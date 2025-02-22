@@ -8,7 +8,9 @@ class TravelCost:
     amount: float
     currency: str = 'USD'
 
-class CostCalculator:
+from smolagents.agents import ActionStep
+
+class CostCalculatorTool:
     def __init__(self):
         self.categories = {
             'Transportation': ['Flights', 'Local Transit', 'Car Rental'],
@@ -40,7 +42,11 @@ class CostCalculator:
             }
         }
 
-    def display_calculator(self):
+    def execute(self, step: ActionStep) -> str:
+        """Execute the cost calculator tool"""
+        return self.display_calculator()
+
+    def display_calculator(self) -> str:
         """Display the travel cost calculator interface"""
         st.subheader('Travel Cost Calculator')
         
